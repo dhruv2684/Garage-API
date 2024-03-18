@@ -14,6 +14,7 @@ var serviceRouter = require('./routes/service');
 var technicianRouter = require('./routes/technician');
 var appointmentRouter = require('./routes/appointment');
 var invoiceRouter = require('./routes/invoice');
+var contactRouter = require('./routes/Contact');
 
 const mongoose = require('mongoose');
 
@@ -43,6 +44,7 @@ app.use('/service', serviceRouter);
 app.use('/technician', technicianRouter);
 app.use('/appointment', appointmentRouter);
 app.use('/invoice', invoiceRouter);
+app.use('/contact', contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
