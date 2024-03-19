@@ -18,9 +18,9 @@ var contactRouter = require('./routes/Contact');
 
 const mongoose = require('mongoose');
 
-.then(() => console.log('Connected!'))
 mongoose.connect(process.env.base_url)
-  .catch((error) => console.log(error.message))
+.then(() => console.log('Connected!'))
+.catch((error) => console.log(error.message))
 
 var app = express();
 app.use(cors())
